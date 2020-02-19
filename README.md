@@ -4,7 +4,7 @@ This is for educational purposes only. DO NOT USE ON A DEPLOYED SERVER.
 
 To run this stack, [install Docker](https://docs.docker.com/install/).
 
-In your directory for an SER322 project, with a `targets` directory, containing a WAR file.
+In SER322 project root directory, the one which contains a `targets` directory which containing a WAR file.
 
 ```bash
 $ docker-compose build
