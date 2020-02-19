@@ -16,7 +16,7 @@ Then
 $ docker-compose up
 ```
 
-REBUILD each time your project recompiles to get an updated site and then start it up, but using the previous two commands.
+REBUILD each time your project recompiles to get an updated site and then start it up by using the previous two commands.
 
 This will start a stack of containers, Tomcat, Adminer, and Postgres. 
 
@@ -24,3 +24,11 @@ Default Adminer password for Postgres:
 
  - User: admin
  - Password: password
+
+To login to Postgres via Adminer.
+
+After connecting to Postgres through the IDE, at thr Postgres connection look at the name under the "database" section and take note.
+
+Select Postgres from the drop down and fill the info.
+
+You will be logged in as a sudo user on the Postgres Server.
