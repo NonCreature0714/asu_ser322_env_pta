@@ -1,4 +1,4 @@
-# SER 322 Stack
+# SER 322 Tomcat/Postgres/Adminer Stack
 
 This is for educational purposes only. DO NOT USE ON A DEPLOYED SERVER.
 
