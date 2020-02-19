@@ -1,5 +1,7 @@
 # SER 322 Stack
 
+This is for educational purposes only. DO NOT USE ON A DEPLOYED SERVER.
+
 To run this stack, [install Docker](https://docs.docker.com/install/).
 
 In your directory for an SER322 project, with a `targets` directory, containing a WAR file.
