@@ -16,6 +16,8 @@ Then
 $ docker-compose up
 ```
 
+REBUILD each time your project recompiles to get an updated site and then start it up, but using the previous two commands.
+
 This will start a stack of containers, Tomcat, Adminer, and Postgres. 
 
 Default Adminer password for Postgres: 
