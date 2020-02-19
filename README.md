@@ -4,11 +4,15 @@ To run this stack, [install Docker](https://docs.docker.com/install/).
 
 In your directory for an SER322 project, with a `targets` directory, containing a WAR file.
 
-```docker-compose build``
+```bash
+    docker-compose build
+```
 
 Then
 
-```docker-compose up``
+```bash
+    docker-compose up
+```
 
 This will start a stack of containers, Tomcat, Adminer, and Postgres. 
 
