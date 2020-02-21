@@ -7,6 +7,11 @@ services:
       - "8080:8080"
     volumes:
       - ../project/target/:/usr/local/tomcat/webapps
+    links:
+      - postgres
+    networks: 
+      SER322_net:
+          ipv4_address: 172.29.1.2
 
   postgres:
     image: postgres:latest
@@ -17,6 +22,9 @@ services:
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
+    networks: 
+      SER322_net:
+          ipv4_address: 172.29.1.3
 
   adminer:
     image: adminer
@@ -26,3 +34,22 @@ services:
     links:
       - postgres
     restart: "always"
+    networks: 
+      SER322_net:
+          ipv4_address: 172.29.1.4
+  
+  ub:
+    image: ubuntu:latest
+    container_name: ubuntu_test
+    networks: 
+      SER322_net:
+          ipv4_address: 172.29.1.5
+    
+
+networks:
+  SER322_net:
+    #driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.29.0.0/16
