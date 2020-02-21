@@ -1,28 +1,26 @@
 version: '3'
 services:
   tomcat:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: ser322_tomcat_stack
+    image: tomcat:9.0.31-jdk13-openjdk-oracle
+    container_name: ser322_stack_tomcat
     ports:
       - "8080:8080"
     volumes:
-      - ./target/:/user/local/tomcat/webapps #change
+      - ../project/target/:/usr/local/tomcat/webapps
 
   postgres:
     image: postgres:latest
-    container_name: ser322_postgres_stack
+    container_name: ser322_stack_postgres
     ports:
-      - "32769:5432" #point intellij to port 32769 to access postgres db
+      - "5433:5432"
     restart: always
     environment:
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
 
   adminer:
     image: adminer
-    container_name: ser322_adminer_stack
+    container_name: ser322_stack_adminer
     ports:
       - "8081:8080"
     links:
